@@ -1,6 +1,6 @@
 class MarketplacesController < ApplicationController
   before_action :set_marketplace, only: [:show, :edit, :update, :destroy]
-  before_action: authenticate_patron!, except: [:show :index]
+  before_action: authenticate_patron!, except: <span class="icon-bar"></span>
   # GET /marketplaces
   # GET /marketplaces.json
   def index

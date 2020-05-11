@@ -1,2 +1,23 @@
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p
+<header class="navbar navbar-fixed-top nabvar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="navbar-header">
+                <span><%= link_to "DiddysEats", root_path, id: "logo" %><span>
+                <span><%= "" %><span>
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav class="navbar-collapse bs-navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="notice"><%= notice %></li>
+                    <li class="alert"><%= alert %></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+       

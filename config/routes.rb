@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :marketplaces
-  root 'marketplaces#index'
+  root 'pages#home'
 
   devise_for :views
   devise_for :patrons
