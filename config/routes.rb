@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :patronsProfile
+
   resources :patrons_profile
+  get "/patronprofile", to: "patrons_profile#show"
+  get "/patronprofile/:id", to: "patrons_profile#show"
 
   resources :marketplaces
   root 'pages#home'
