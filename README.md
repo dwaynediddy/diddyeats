@@ -71,12 +71,9 @@ Git Repositories here: https://github.com/dwaynediddy/diddyeats
 ## schema design
 
 ## Describe the way tasks are allocated and tracked in your project
+
 https://trello.com/b/HToipMnw/diddyeats
 
-
-## URL
-Deployed website here: https://secret-sea-36538.herokuapp.com/
-Git Repositories here: https://github.com/dwaynediddy/diddyeats
 
 ---
 
