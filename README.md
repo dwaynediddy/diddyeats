@@ -80,11 +80,13 @@ Git Repositories here: https://github.com/dwaynediddy/diddyeats
 
 ---
 
-#    Deployment instructions
+##    Deployment instructions
 
-## Ruby version 2.7.0
-## gem list added to Gemfile
+### Ruby version 2.7.0
+### gem list added to Gemfile
+
 gem "devise"
+
 gem "cancancan", '~> 1.10'
 
 ### run in terminal
