@@ -12,6 +12,7 @@ resteraunts via the app.
 ---
 
 ## URL
+
 Deployed website here: https://secret-sea-36538.herokuapp.com/
 
 Git Repositories here: https://github.com/dwaynediddy/diddyeats
@@ -33,8 +34,7 @@ Git Repositories here: https://github.com/dwaynediddy/diddyeats
 - (potentially) rating system
 
 ## sitemap
-
-## screenshots
+![Sitemap](/config/docs/sitemap.png)
 
 ## taget audience
 
@@ -52,7 +52,7 @@ Git Repositories here: https://github.com/dwaynediddy/diddyeats
 ## wireframes for app
 
 ## ERD for app
-![Sitemap](/config/docs/sitemap.png)
+![ERD](/config/docs/erd.png)
 
 ## high level components
 
