@@ -16,6 +16,7 @@ resteraunts via the app.
 Deployed website here: https://secret-sea-36538.herokuapp.com/
 
 Git Repositories here: https://github.com/dwaynediddy/diddyeats
+
 ---
 
 ## functionality/features
