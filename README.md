@@ -1,16 +1,19 @@
 # README
+# diddyeats
+
 ## purpose problem and solution
 While we are inundate with COVID-19 and everyone is segregated from their favourite dining saloon, Let 
 Diddyeats© help you find the best food at the best prices! and have you assimilating your food in no time!
-with the words first ever  never seen before app of this kind *diclaimer(has definitly been done before)
+with the words first ever, never been done before app of this kind *diclaimer(has definitly been done before)
 
-This app aims to have you ability to sign up an account securly creating a profile all0wing you to access 
+This app aims to have you ability to sign up an account securly creating a profile allowing you to access 
 resteraunts via the app.
 
 ---
 
 ## URL
 Deployed website here: https://secret-sea-36538.herokuapp.com/
+
 Git Repositories here: https://github.com/dwaynediddy/diddyeats
 ---
 
@@ -36,27 +39,45 @@ Git Repositories here: https://github.com/dwaynediddy/diddyeats
 ## taget audience
 
 ## techstack
+- ruby gems (see Deplyoyment instructions)
+- ruby on rails
+- html
+- css
+- JavaScript
+- postgresql
+- heroku
 
-## trello/user stories
-https://trello.com/b/HToipMnw/diddyeats
+## user stories for app
 
-## wireframes
+## wireframes for app
 
-## ERD
+## ERD for app
+![Sitemap](/config/docs/sitemap.png)
 
 ## high level components
 
 ## third party services used
+- postgresql - what it do
+- heroku - what it do
+- (insert image sharing service)
+- (insert payment 3rd party)
+- 
+
+## Describe your projects models in terms of the relationships (active record associations) they have with each other
+
+##	Discuss the database relations to be implemented in your application
 
 ## schema design
 
-## task allocation and tracked in project
+## Describe the way tasks are allocated and tracked in your project
+https://trello.com/b/HToipMnw/diddyeats
 
-## slide deck
 
 ## URL
 Deployed website here: https://secret-sea-36538.herokuapp.com/
 Git Repositories here: https://github.com/dwaynediddy/diddyeats
+
+---
 
 #    Deployment instructions
 
@@ -71,10 +92,16 @@ rails g devise:install
 
 bundle install
 
+---
+
+## slide deck
+
+---
 
 
 
 
 
 
-# diddyeats
+
+
