@@ -10,7 +10,7 @@ class PatronsController < ApplicationController
 
   def update
     @patron = Patron.find(params[:id])
-    if params[:patron][:business_role] == "1"
+    if params[:patron][:business_role] == "1" 
     
     end
       @patron.save
