@@ -84,10 +84,10 @@ https://trello.com/b/HToipMnw/diddyeats
 
 gem "devise"
 
-gem "cancancan", '~> 1.10'
+gem 'rolify'
 
 ### run in terminal
-rails g cancan:ability
+
 rails g devise:install
 
 bundle install
