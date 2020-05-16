@@ -16,7 +16,7 @@
         <td><%= marketplace.patron_id %></td>
         <td><%= link_to 'Show', marketplace %></td>
         <% if current_patron && current_patron.admin %>
-        <td><%= link_to 'Edit', edit_marketplaces_path(marketplaces) %></td>
+        <td><%= link_to 'Edit', edit_marketplace_path(@marketplace) %></td>
         <td><%= link_to 'Destroy', marketplace, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
