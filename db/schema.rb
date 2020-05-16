@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_15_012001) do
+ActiveRecord::Schema.define(version: 2020_05_16_044802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assignments", force: :cascade do |t|
+    t.bigint "patron_id", null: false
+    t.bigint "role_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["patron_id"], name: "index_assignments_on_patron_id"
+    t.index ["role_id"], name: "index_assignments_on_role_id"
+  end
 
   create_table "marketplaces", force: :cascade do |t|
     t.bigint "patron_id", null: false
@@ -32,6 +41,10 @@ ActiveRecord::Schema.define(version: 2020_05_15_012001) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin", default: false
     t.boolean "business_role"
+    t.string "username"
+    t.string "city"
+    t.string "streetname"
+    t.integer "phone"
     t.index ["email"], name: "index_patrons_on_email", unique: true
     t.index ["reset_password_token"], name: "index_patrons_on_reset_password_token", unique: true
   end
@@ -78,5 +91,7 @@ ActiveRecord::Schema.define(version: 2020_05_15_012001) do
     t.index ["reset_password_token"], name: "index_views_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "assignments", "patrons"
+  add_foreign_key "assignments", "roles"
   add_foreign_key "marketplaces", "patrons"
 end

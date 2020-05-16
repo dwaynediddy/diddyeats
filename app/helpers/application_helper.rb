@@ -1,6 +1,6 @@
 module ApplicationHelper
     
-    def patron.has_role(role)
+    def has_role()
 
     end
 end

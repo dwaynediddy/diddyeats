@@ -12,6 +12,16 @@
 
   <body>
     <%= render "layouts/alerts" %>
+
+    <% if patron_signed_in? %>
+      <a href=”<%= patron_path(current_patron)%>”>
+        <i class=”fa fa-user”></i>
+      </a>
+    <% else %>
+      <a href=”<%= new_patron_session_path%>”>
+        <i class=”fa fa-sign-in”></i>
+      </a>
+    <% end %>
    
     <%= yield %>
     <%= render "layouts/footer" %>

@@ -1,2 +1,37 @@
 <h1>@patron</h1>
 <p>Find me in app/views/patrons/show.html.erb</p>
+<div class="profile row">
+  <div class="col-md-4 avatar">
+    <!-- LEFT: AVATAR HERE -->
+  </div>
+  <div class="col-md-8 basic-info">
+    <!-- RIGHT: USER INFORMATION HERE -->
+  </div>
+</div>
+<div class="col-md-8 basic-info">
+<div class="user-wrapper">
+  <h2 class="username"></h2>
+  <a class="edit-profile">
+    <button>Edit Profile</button>
+  </a>
+</div>
+<ul class="posts">
+  <li><span>12</span> posts</li>
+  <li><span>195</span> followers</li>
+  <li><span>345</span> following</li>
+</ul>
+<h2 class="name"></h2>
+<a class="website"></a>
+</div>
+</div>
+</div>
+
+<div class="patron-images">
+  <% @posts.each do |post|%>
+    <div class="wrapper">
+      <%=link_to post_path(post) do %>
+        <%=image_tag post.image %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -4,6 +4,7 @@ class Patron < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+         
          def patronname
             return self.email.split('@')[0]
          end
