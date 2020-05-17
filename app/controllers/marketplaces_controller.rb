@@ -27,10 +27,12 @@ class MarketplacesController < ApplicationController
   # POST /marketplaces
   # POST /marketplaces.json
   def create
-    @marketplace = Marketplace.new("marketplaces_path")
+    @marketplace = Marketplace.new()
     @marketplace.patron = current_patron
+    @marketplace.image.attach(params[:marketplace][:image])
     respond_to do |format|
       if @marketplace.save
+          
         format.html { redirect_to @marketplace, notice: 'Marketplace was successfully created.' }
         format.json { render :show, status: :created, location: @marketplace }
       else

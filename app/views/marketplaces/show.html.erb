@@ -1,32 +1,9 @@
 
 <p>
-  <strong>Patron:</strong>
+  <strong>@Patronname</strong>
   <%= @marketplace.patron.email.split(@)[0] %>
 </p>
-
-<div class="marketplace-show">
-<div class="marketplace-show row">
-  <div class="col-md-8">
-    <%= image_tag @marketplace.image, class: 'image' %>
-  </div>
-  <div class="col-md-4">
-    <div class="patron">
-      <div class="avatar">
-        <% if @marketplace.patron.avatar.attached? %>
-          <%= link_to patron_path(@marketplace.patron) do %>
-            <%= image_tag @marketpalce.patron.avatar %>
-          <% end %>
-        <% end %>
-      </div>
-      <%= link_to @marketplace.patron.patronname, patron_path(@marketplace.patron), class: 'patronname' %>
-    </div>
-    <div class="description">
-      <%= @marketplace.description %>
-    </div>
-  </div>
-</div>
-  
-</div>
+<%= image_tag @marketplace.image, width: 100px %> 
 
 <%= link_to 'edit', edit_marketplace_path(@marketplace) %>
 <%= link_to 'Back', patron_path %>
