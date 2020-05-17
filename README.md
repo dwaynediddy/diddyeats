@@ -47,6 +47,7 @@ Git Repositories here: https://github.com/dwaynediddy/diddyeats
 - JavaScript
 - postgresql
 - heroku
+- amazon, aws/s3
 
 ## user stories for app
 
