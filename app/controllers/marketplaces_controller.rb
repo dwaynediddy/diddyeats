@@ -27,7 +27,7 @@ class MarketplacesController < ApplicationController
   # POST /marketplaces
   # POST /marketplaces.json
   def create
-    @marketplace = Marketplace.new(marketplaces_path)
+    @marketplace = Marketplace.new("marketplaces_path")
     @marketplace.patron = current_patron
     respond_to do |format|
       if @marketplace.save
