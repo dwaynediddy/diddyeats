@@ -3,9 +3,9 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><%= link_to "home", "/" %></liv>
-                    <li><%= link_to "market", "marketplaces" %></liv>
-                    <li><%= link_to "patron", "patron" %></liv>  
+                    <li><%= link_to "home", root_path %></li>
+                    <li><%= link_to "market", marketplaces_path %></li>
+                    <li><%= link_to "patron", patron_path(current_patron) %></li>  
                 </ul>
             </nav>
         </div>

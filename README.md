@@ -38,6 +38,7 @@ Git Repositories here: https://github.com/dwaynediddy/diddyeats
 ![Sitemap](/config/docs/sitemap.png)
 
 ## taget audience
+people who like food
 
 ## techstack
 - ruby gems (see Deplyoyment instructions)
@@ -50,6 +51,12 @@ Git Repositories here: https://github.com/dwaynediddy/diddyeats
 - amazon, aws/s3
 
 ## user stories for app
+- secure login 
+- add profile picture
+- see options on the market place
+- use off a search bar to narrow down what im looking for
+- have a safe and secure checkout
+- safely store my details so i don't have to enter them each time
 
 ## wireframes for app
 
@@ -72,6 +79,7 @@ Git Repositories here: https://github.com/dwaynediddy/diddyeats
 ## schema design
 
 ## Describe the way tasks are allocated and tracked in your project
+Tasks are allocated with the basic necessaties first following a hierachy of tasks, who the task is for and differculty of said task. pulled to a "doing" colum when in progress to a  "done" column when complete using. While tasks that would not be implemented before the deadline where carefully weighed up in relevance and regrettably abandon if the oppertunity was not plausable for the greater outcome.
 
 https://trello.com/b/HToipMnw/diddyeats
 
@@ -89,13 +97,14 @@ gem 'rolify'
 
 ### run in terminal
 
-rails g devise:install
 
 bundle install
 
 ---
 
 ## slide deck
+
+https://docs.google.com/presentation/d/1kjWrfh7O9tXcL96npNLssrkz75WUvn2a8OI12tytFi4/edit?usp=sharing
 
 ---
 

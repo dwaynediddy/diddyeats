@@ -1,9 +1,11 @@
 
 <p>
   <strong>@Patronname</strong>
-  <%= @marketplace.patron.email.split(@)[0] %>
+  <%= @marketplace.patron.email.split("@")[0] %>
 </p>
-<%= image_tag @marketplace.image, width: 100px %> 
+<% if @marketplace.image.attached? %>
+  <%= image_tag @marketplace.image %> 
+<% end %>
 
 <%= link_to 'edit', edit_marketplace_path(@marketplace) %>
 <%= link_to 'Back', patron_path %>

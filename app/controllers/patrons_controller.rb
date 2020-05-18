@@ -1,7 +1,7 @@
 class PatronsController < ApplicationController
 
   def show
-    # @patron = Patron.find(params[:id])
+    @patron = Patron.find(params[:id])
   end
 
   def edit

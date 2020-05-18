@@ -12,7 +12,7 @@ class MarketplacesController < ApplicationController
   # GET /marketplaces/1
   # GET /marketplaces/1.json
   def show
-    @marketplace = Marketplace.find(params[:id])
+    # @marketplace = Marketplace.find(params[:id])
   end
 
   # GET /marketplaces/new
@@ -38,7 +38,7 @@ class MarketplacesController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @marketplace.errors, status: :unprocessable_entity }
-      
+      end
     end
   end
 
@@ -76,14 +76,13 @@ class MarketplacesController < ApplicationController
       #also only want business roles to be able to post once on marketplace with an image/bio/link back to thier profile which has the wares to purchase
   end
     # Use callbacks to share common setup or constraints between actions.
-    def set_marketplace
-      @marketplace = Marketplace.find(params[:id])
-    end
+  def set_marketplace
+    @marketplace = Marketplace.find(params[:id])
+  end
 
     # Only allow a list of trusted parameters through.
-    def marketplace_params
-      params.require(:marketplace).permit()
-    end
+  def marketplace_params
+    params.require(:marketplace).permit()
   end
 end
 
