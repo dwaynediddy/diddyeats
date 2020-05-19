@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   resources :marketplaces
+  resources :menu_items
   root 'pages#home'
 
   devise_for :patrons
   resources :patrons, only: [:show]
-  resources :marketplaces, only: [:new, :create, :show, :destroy]
+  
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

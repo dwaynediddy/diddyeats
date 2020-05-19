@@ -13,6 +13,7 @@ class MarketplacesController < ApplicationController
   # GET /marketplaces/1.json
   def show
     # @marketplace = Marketplace.find(params[:id])
+    @menu_item = MenuItem.new
   end
 
   # GET /marketplaces/new
