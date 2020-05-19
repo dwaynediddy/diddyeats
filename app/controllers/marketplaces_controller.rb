@@ -1,7 +1,7 @@
 class MarketplacesController < ApplicationController
   before_action :set_marketplace, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_patron!, except: [:show, :index]
-  
+  before_action :authorize, only: [:new, :edit, :create]
 
   # GET /marketplaces
   # GET /marketplaces.json
@@ -72,6 +72,11 @@ class MarketplacesController < ApplicationController
   private
 
   def authorize
+      if !current_patron.has_role?(:admin)
+        flash[:alert] = "Not Authorized."
+        redirect_to marketplaces_url
+  end
+
       #if patron not a business role cant post edit or delete anything, ideally wouldnt even be able to see the options
       #also only want business roles to be able to post once on marketplace with an image/bio/link back to thier profile which has the wares to purchase
   end

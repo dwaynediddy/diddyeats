@@ -3,6 +3,6 @@ class Marketplace < ApplicationRecord
   has_one_attached :image
 
   
-  # only want business role to be able to post on market. want that post to link to business profile
-  # where they can attach many images to the profile.
+  # only want business role to be able to post on market. when shown ideally would have prices with checkboxes and a checkout button
+
 end
