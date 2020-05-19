@@ -65,7 +65,7 @@ class MarketplacesController < ApplicationController
       format.json { head :no_content }
       @post = current_patron.posts.find(params[:id])
       @post.destroy
-      redirect_to user_path(current_patron)
+      redirect_to patron_path(current_patron)
     end
   end
 
