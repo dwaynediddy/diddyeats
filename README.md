@@ -36,7 +36,7 @@ Git Repositories here: https://github.com/dwaynediddy/diddyeats
 - (potentially) rating system
 
 ## sitemap
-![Sitemap](/config/docs/sitemap.png)
+![Sitemap](/docs/sitemap.png)
 
 ## taget audience
 people who like food
