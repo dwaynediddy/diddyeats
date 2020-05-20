@@ -63,19 +63,19 @@ people who like food
 
 <details><br>
 
-![wireframe1](/config/docs/smartphonesignups.png)
-![wireframe2](/config/docs/ipadbusinessprofile.png)
-![wireframe3](/config/docs/smartphonepaertonprofile.png)
-![wireframe4](/config/docs/pcmarketplace.png)
-![wireframe5](/config/docs/ipad.checkoutpage.png)
-![wireframe6](/config/docs/PCsignuppage.png)
+![wireframe1](/docs/smartphonesignups.png)
+![wireframe2](/docs/ipadbusinessprofile.png)
+![wireframe3](/docs/smartphonepaertonprofile.png)
+![wireframe4](/docs/pcmarketplace.png)
+![wireframe5](/docs/ipad.checkoutpage.png)
+![wireframe6](/docs/PCsignuppage.png)
 
 </details>
 
 ---
 
 ## ERD for app
-![ERD](/config/docs/erd.png)
+![ERD](/docs/erd.png)
 
 ## high level components
 Devise being the first component encountered when using the app having a sign up and sign in option when a user signs up or signs in the option to log out will replace sign in hitting this option will destroy the current users session after sign up/in  you can link to marketplace. The marketplace gives you the option to "show" what resteraunts have posted resteraunts can create posts if role is admin/business_role using rolify, aswell as edit if current_patron is not it will route patron straight to marketplace.
