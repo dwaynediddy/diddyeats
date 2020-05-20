@@ -59,7 +59,9 @@ people who like food
 - safely store my details so i don't have to enter them each time
 
 ## wireframes for app
+
 <details><summary>schema design </summary><br>
+
 ![wireframe1](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/smartphonesignups.png)
 ![wireframe2](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/ipadbusinessprofile.png)
 ![wireframe3](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/smartphonepaertonprofile.png)
