@@ -236,7 +236,8 @@ end
 ## Describe the way tasks are allocated and tracked in your project
 Tasks are allocated with the basic necessaties first following a hierachy of tasks, who the task is for and differculty of said task. pulled to a "doing" colum when in progress to a  "done" column when complete using. While tasks that would not be implemented before the deadline where carefully weighed up in relevance and regrettably abandon if the oppertunity was not plausable for the greater outcome.
 
-![trello]https://trello.com/b/HToipMnw/diddyeats
+Trello board: https://trello.com/b/HToipMnw/diddyeats
+![trello]/config/docs/trello.png
 
 
 ---
