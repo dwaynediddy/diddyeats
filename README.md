@@ -86,11 +86,13 @@ eventually when the resteraunt adds menu_items and prices the patron will then b
 ---
 
 ## third party services used
-- postgresql - what it do
-- heroku - what it do
-- (insert image sharing service)
-- (insert payment 3rd party)
-- 
+- postgresql - for database
+- heroku - used to deploy app
+- AWS/s3
+- insert payment 3rd party
+- devise gem
+- rolify gem
+- stripe gem added (may not be used at current time)
 
 ## Describe your projects models in terms of the relationships (active record associations) they have with each other
 This project Diddy eats was modelled after UberEats at this time where social distancing is crucial
@@ -251,8 +253,11 @@ gem "devise"
 
 gem 'rolify'
 
+gem 'stripe'
+
 ### run in terminal
 
+git clone
 
 bundle install
 
