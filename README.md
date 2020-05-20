@@ -84,8 +84,7 @@ add pngs
 
 ## schema design
 <details>
-<summary>
-# This file is auto-generated from the current state of the database. Instead
+<summary># This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
@@ -213,10 +212,7 @@ ActiveRecord::Schema.define(version: 2020_05_19_043515) do
   add_foreign_key "assignments", "roles"
   add_foreign_key "marketplaces", "patrons"
   add_foreign_key "menu_items", "marketplaces"
-end
-
-
-</summary>
+end</summary>
 </details>
 
 ## Describe the way tasks are allocated and tracked in your project
