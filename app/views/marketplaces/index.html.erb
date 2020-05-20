@@ -1,0 +1,31 @@
+<h1>Marketplaces</h1>
+
+  <tbody>
+    <% @marketplaces.each do |marketplace| %>
+      <table>
+      <thead>
+        <tr>
+          <th> Patron</th>
+          <th>resteraunt </th>
+          <th> Bio </th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      
+      
+        <td><%= marketplace.patron_id %></td>
+        <td><%= link_to 'Show', marketplace %></td>
+        # may need to be current_patron+business_role
+        <% if current_patron && current_patron.admin %> 
+        <td><%= link_to 'Edit', edit_marketplace_path(@marketplace) %></td>
+        <td><%= link_to 'Destroy', marketplace, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+# if business role(figuring out how to create) go to create marketplace, else link_to marketplace_path 
+
+<%= link_to 'Marketplaces', new_marketplace_path %>

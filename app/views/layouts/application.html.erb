@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <title>Diddyeats</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+      
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render "layouts/alerts" %>
+
+    <% if patron_signed_in? %>
+      <a href=”<%= patron_path(current_patron)%>”>
+        <i class=”fa fa-user”></i>
+      </a>
+    <% else %>
+      <a href=”<%= new_patron_session_path%>”>
+        <i class=”fa fa-sign-in”></i>
+      </a>
+    <% end %>
+    </section>
+   
+    <%= yield %>
+    <%= render "layouts/footer" %>
+  </body>
+</html>
