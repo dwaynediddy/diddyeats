@@ -59,7 +59,15 @@ people who like food
 - safely store my details so i don't have to enter them each time
 
 ## wireframes for app
-add pngs
+<details><summary>schema design </summary><br>
+![wireframe1](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/smartphonesignups.png)
+![wireframe2](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/ipadbusinessprofile.png)
+![wireframe3](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/smartphonepaertonprofile.png)
+![wireframe4](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/pcmarketplace.png)
+![wireframe5](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/ipad.checkoutpage.png)
+![wireframe6](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/PCsignuppage.png)
+
+</details>
 
 ---
 
@@ -82,8 +90,8 @@ add pngs
 
 ##	Discuss the database relations to be implemented in your application
 
-
-<details><summary> ## schema design </summary><br>
+## schema design
+<details><summary>schema design </summary><br>
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
