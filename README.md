@@ -60,7 +60,7 @@ people who like food
 
 ## wireframes for app
 
-<details><summary>schema design </summary><br>
+<details><br>
 
 ![wireframe1](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/smartphonesignups.png)
 ![wireframe2](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/ipadbusinessprofile.png)
