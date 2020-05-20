@@ -77,6 +77,10 @@ people who like food
 ![ERD](/config/docs/erd.png)
 
 ## high level components
+Devise being the first component encountered when using the app having a sign up and sign in option when a user signs up or signs in the option to log out will replace sign in hitting this option will destroy the current users session after sign up/in  you can link to marketplace. The marketplace gives you the option to "show" what resteraunts have posted resteraunts can create posts if role is admin/business_role using rolify, aswell as edit if current_patron is not it will route patron straight to marketplace.
+
+(may not be done at time of reading)
+eventually when the resteraunt adds menu_items and prices the patron will then be able to tickbox items to send to checkout which will relocate them to the 3rd party which handles transactions
 
 
 ---
@@ -89,8 +93,12 @@ people who like food
 - 
 
 ## Describe your projects models in terms of the relationships (active record associations) they have with each other
+This project Diddy eats was modelled after UberEats at this time where social distancing is crucial
+this model would surely be utilised while timing and skill have completely left out the role of a driver a pick up option (may or may not be added by submission) could still make this relevant relating the marketplace with many businesses and many patrons belonging to it, while the marketplace belongs to a patron it can display one image and many items to be purchased. 
 
 ##	Discuss the database relations to be implemented in your application
+originally planned for the database to contain a marketplace relating to many patrons and businesses
+where a single patron could connect to many businesses via the marketplace although the relationship between patron and this marketplace was purely to be able to view posts which only businesses could post, show and edit. this Admin role was given to resteraunts via sign in by ticking the "im a resteraunt box" which was visible until installing rolify and not being able to find a solution it may not be displayed at this time. with rolify and device being needed to create roles and device needed to store passwords and usernames and encrypt them to remain secure.
 
 ## schema design
 <details><summary>schema design </summary><br>
