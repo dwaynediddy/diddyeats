@@ -7,6 +7,7 @@ class MenuItemsController < ApplicationController
         redirect_to root_path        
     end
 
+
     def menu_item_params
         params.require(:menu_item).permit(:name, :price)
 
