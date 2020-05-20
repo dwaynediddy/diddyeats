@@ -62,12 +62,12 @@ people who like food
 
 <details><br>
 
-![wireframe1](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/smartphonesignups.png)
-![wireframe2](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/ipadbusinessprofile.png)
-![wireframe3](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/smartphonepaertonprofile.png)
-![wireframe4](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/pcmarketplace.png)
-![wireframe5](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/ipad.checkoutpage.png)
-![wireframe6](/Users/dwayne/Desktop/rails/rails-marketplace-app/diddyeats/config/docs/PCsignuppage.png)
+![wireframe1](/config/docs/smartphonesignups.png)
+![wireframe2](/config/docs/ipadbusinessprofile.png)
+![wireframe3](/config/docs/smartphonepaertonprofile.png)
+![wireframe4](/config/docs/pcmarketplace.png)
+![wireframe5](/config/docs/ipad.checkoutpage.png)
+![wireframe6](/config/docs/PCsignuppage.png)
 
 </details>
 
