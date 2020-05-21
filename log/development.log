@@ -33034,3 +33034,270 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 5582)
 
 
+Started GET "/" for ::1 at 2020-05-21 09:35:35 +1000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mPatron Load (0.4ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:2
+  Rendered pages/home.html.erb within layouts/application (Duration: 20.5ms | Allocations: 9875)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.8ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 168)
+Completed 200 OK in 48ms (Views: 36.6ms | ActiveRecord: 4.6ms | Allocations: 20826)
+
+
+Started GET "/" for ::1 at 2020-05-21 09:36:20 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mPatron Load (0.3ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:2
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 163)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 7214)
+
+
+Started GET "/marketplaces/new" for ::1 at 2020-05-21 09:36:26 +1000
+Processing by MarketplacesController#new as HTML
+  [1m[36mPatron Load (0.3ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRole Load (3.6ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "patrons_roles" ON "roles"."id" = "patrons_roles"."role_id" WHERE "patrons_roles"."patron_id" = $1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["patron_id", 1]]
+  ↳ app/controllers/marketplaces_controller.rb:76:in `authorize'
+  Rendering marketplaces/new.html.erb within layouts/application
+  Rendered marketplaces/_form.html.erb (Duration: 10.8ms | Allocations: 3731)
+  Rendered marketplaces/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 4063)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+Completed 200 OK in 56ms (Views: 19.3ms | ActiveRecord: 9.5ms | Allocations: 23858)
+
+
+Started GET "/marketplaces" for ::1 at 2020-05-21 09:36:30 +1000
+Processing by MarketplacesController#index as HTML
+  Rendering marketplaces/index.html.erb within layouts/application
+  [1m[36mMarketplace Load (0.5ms)[0m  [1m[34mSELECT "marketplaces".* FROM "marketplaces"[0m
+  ↳ app/views/marketplaces/index.html.erb:4
+  [1m[36mPatron Load (0.4ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/marketplaces/index.html.erb:19
+  Rendered marketplaces/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2242)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 46)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.9ms | Allocations: 6810)
+
+
+Started GET "/marketplaces/1" for ::1 at 2020-05-21 09:36:32 +1000
+Processing by MarketplacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMarketplace Load (0.2ms)[0m  [1m[34mSELECT "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/marketplaces_controller.rb:86:in `set_marketplace'
+  Rendering marketplaces/show.html.erb within layouts/application
+  [1m[36mPatron Load (0.3ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/marketplaces/show.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Marketplace"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/marketplaces/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/marketplaces/show.html.erb:7
+  Rendered marketplaces/show.html.erb within layouts/application (Duration: 51.5ms | Allocations: 33908)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mPatron Load (0.3ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+Completed 200 OK in 70ms (Views: 52.3ms | ActiveRecord: 9.3ms | Allocations: 43562)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--53aec4c3da754976e20412b46650596a5e485e1c/Menu_Catering_Mobile.jpg" for ::1 at 2020-05-21 09:36:32 +1000
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--53aec4c3da754976e20412b46650596a5e485e1c", "filename"=>"Menu_Catering_Mobile"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  S3 Storage (1.4ms) [0m[34mGenerated URL for file at key: oumuseplawxlq45374altt3lu6xe (https://diddyeats-app.s3.us-east-2.amazonaws.com/oumuseplawxlq45374altt3lu6xe?response-content-disposition=inline%3B%20filename%3D%22Menu_Catering_Mobile.jpg%22%3B%20filename%2A%3DUTF-8%27%27Menu_Catering_Mobile.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXDHKZBXACDVGKWRC%2F20200520%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20200520T233632Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5d3c3d5e501550bb5fa6ff8dbf6bad738608c8dc17abc919b7bc62f917f38dfe)[0m
+Redirected to https://diddyeats-app.s3.us-east-2.amazonaws.com/oumuseplawxlq45374altt3lu6xe?response-content-disposition=inline%3B%20filename%3D%22Menu_Catering_Mobile.jpg%22%3B%20filename%2A%3DUTF-8%27%27Menu_Catering_Mobile.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXDHKZBXACDVGKWRC%2F20200520%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20200520T233632Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5d3c3d5e501550bb5fa6ff8dbf6bad738608c8dc17abc919b7bc62f917f38dfe
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 2909)
+
+
+Started GET "/" for ::1 at 2020-05-21 09:39:43 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mPatron Load (0.4ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:2
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1157)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 163)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.4ms | Allocations: 7189)
+
+
+Started GET "/" for ::1 at 2020-05-21 09:39:43 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mPatron Load (0.2ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:2
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 986)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms | Allocations: 5358)
+
+
+Started GET "/" for ::1 at 2020-05-21 09:47:16 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mPatron Load (0.5ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:2
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 163)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.7ms | Allocations: 21038)
+
+
+Started GET "/" for ::1 at 2020-05-21 09:48:21 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mPatron Load (0.3ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:2
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.3ms | Allocations: 15144)
+
+
+Started GET "/" for ::1 at 2020-05-21 09:48:50 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mPatron Load (0.3ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:2
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 984)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.3ms | Allocations: 15878)
+
+
+Started GET "/marketplaces/new" for ::1 at 2020-05-21 09:48:57 +1000
+Processing by MarketplacesController#new as HTML
+  [1m[36mPatron Load (0.6ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRole Load (1.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "patrons_roles" ON "roles"."id" = "patrons_roles"."role_id" WHERE "patrons_roles"."patron_id" = $1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["patron_id", 1]]
+  ↳ app/controllers/marketplaces_controller.rb:76:in `authorize'
+  Rendering marketplaces/new.html.erb within layouts/application
+  Rendered marketplaces/_form.html.erb (Duration: 2.7ms | Allocations: 1244)
+  Rendered marketplaces/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 1.8ms | Allocations: 9100)
+
+
+Started GET "/marketplaces" for ::1 at 2020-05-21 09:49:00 +1000
+Processing by MarketplacesController#index as HTML
+  Rendering marketplaces/index.html.erb within layouts/application
+  [1m[36mMarketplace Load (0.6ms)[0m  [1m[34mSELECT "marketplaces".* FROM "marketplaces"[0m
+  ↳ app/views/marketplaces/index.html.erb:4
+  [1m[36mPatron Load (0.3ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/marketplaces/index.html.erb:19
+  Rendered marketplaces/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2216)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 46)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.9ms | Allocations: 6765)
+
+
+Started GET "/marketplaces" for ::1 at 2020-05-21 09:59:18 +1000
+Processing by MarketplacesController#index as HTML
+  Rendering marketplaces/index.html.erb within layouts/application
+  [1m[36mMarketplace Load (0.7ms)[0m  [1m[34mSELECT "marketplaces".* FROM "marketplaces"[0m
+  ↳ app/views/marketplaces/index.html.erb:4
+  [1m[36mPatron Load (0.4ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/marketplaces/index.html.erb:19
+  Rendered marketplaces/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 163)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 1.2ms | Allocations: 21535)
+
+
+Started GET "/marketplaces/1" for ::1 at 2020-05-21 10:01:40 +1000
+Processing by MarketplacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMarketplace Load (0.3ms)[0m  [1m[34mSELECT "marketplaces".* FROM "marketplaces" WHERE "marketplaces"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/marketplaces_controller.rb:86:in `set_marketplace'
+  Rendering marketplaces/show.html.erb within layouts/application
+  [1m[36mPatron Load (0.3ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/marketplaces/show.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Marketplace"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/marketplaces/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/marketplaces/show.html.erb:7
+  Rendered marketplaces/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3924)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 54)
+  [1m[36mPatron Load (0.2ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 1.5ms | Allocations: 9964)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--53aec4c3da754976e20412b46650596a5e485e1c/Menu_Catering_Mobile.jpg" for ::1 at 2020-05-21 10:01:40 +1000
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--53aec4c3da754976e20412b46650596a5e485e1c", "filename"=>"Menu_Catering_Mobile"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  S3 Storage (0.8ms) [0m[34mGenerated URL for file at key: oumuseplawxlq45374altt3lu6xe (https://diddyeats-app.s3.us-east-2.amazonaws.com/oumuseplawxlq45374altt3lu6xe?response-content-disposition=inline%3B%20filename%3D%22Menu_Catering_Mobile.jpg%22%3B%20filename%2A%3DUTF-8%27%27Menu_Catering_Mobile.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXDHKZBXACDVGKWRC%2F20200521%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20200521T000140Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2af4bfcbf2073fa623c5ba14c496fed817855d8cab26cb3062320516c22ff0c2)[0m
+Redirected to https://diddyeats-app.s3.us-east-2.amazonaws.com/oumuseplawxlq45374altt3lu6xe?response-content-disposition=inline%3B%20filename%3D%22Menu_Catering_Mobile.jpg%22%3B%20filename%2A%3DUTF-8%27%27Menu_Catering_Mobile.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXDHKZBXACDVGKWRC%2F20200521%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20200521T000140Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2af4bfcbf2073fa623c5ba14c496fed817855d8cab26cb3062320516c22ff0c2
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 2607)
+
+
+Started GET "/" for ::1 at 2020-05-21 10:01:46 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mPatron Load (0.3ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:2
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 46)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 6223)
+
+
+Started GET "/marketplaces" for ::1 at 2020-05-21 10:01:53 +1000
+Processing by MarketplacesController#index as HTML
+  Rendering marketplaces/index.html.erb within layouts/application
+  [1m[36mMarketplace Load (0.4ms)[0m  [1m[34mSELECT "marketplaces".* FROM "marketplaces"[0m
+  ↳ app/views/marketplaces/index.html.erb:4
+  [1m[36mPatron Load (0.4ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/marketplaces/index.html.erb:19
+  Rendered marketplaces/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1965)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 46)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.7ms | Allocations: 6383)
+
+
+Started GET "/" for ::1 at 2020-05-21 10:03:07 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mPatron Load (0.3ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:2
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 983)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 5354)
+
+
+Started GET "/marketplaces" for ::1 at 2020-05-21 10:03:10 +1000
+Processing by MarketplacesController#index as HTML
+  Rendering marketplaces/index.html.erb within layouts/application
+  [1m[36mMarketplace Load (0.3ms)[0m  [1m[34mSELECT "marketplaces".* FROM "marketplaces"[0m
+  ↳ app/views/marketplaces/index.html.erb:4
+  [1m[36mPatron Load (0.4ms)[0m  [1m[34mSELECT "patrons".* FROM "patrons" WHERE "patrons"."id" = $1 ORDER BY "patrons"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/marketplaces/index.html.erb:19
+  Rendered marketplaces/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1957)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.8ms | Allocations: 6354)
+
+
